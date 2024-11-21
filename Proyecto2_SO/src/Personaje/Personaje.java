@@ -10,7 +10,7 @@ import Enumeracion.TipoEnum;
 
 /**
  *
- * @author andre
+ * @author chris
  */
 public class Personaje{
     

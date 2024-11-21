@@ -911,7 +911,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto2_so/NickImages/Appa.png"/>
+              <Image iconType="3" name="/StartrekImagenes/AverageCardStrek.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -924,7 +924,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto2_so/NickImages/Appa.png"/>
+              <Image iconType="3" name="/StarWarsImagenes/AverageCardAvatar.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -936,7 +936,7 @@
         <Component class="javax.swing.JLabel" name="swarsTarjeta">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto2_so/NickImages/AverageCardAvatar.png"/>
+              <Image iconType="3" name="/StarWarsImagenes/AverageCardAvatar.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -949,7 +949,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto2_so/CartoonImages/DeficientCardRegShow.png"/>
+              <Image iconType="3" name="/StartrekImagenes/AverageCardStrek.png"/>
             </Property>
           </Properties>
           <Constraints>

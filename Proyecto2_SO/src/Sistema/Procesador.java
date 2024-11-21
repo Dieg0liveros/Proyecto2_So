@@ -16,7 +16,7 @@ import Enumeracion.TipoEnum;
 
 /**
  *
- * @author HP
+ * @author chris
  */
 public class Procesador extends Thread {
 

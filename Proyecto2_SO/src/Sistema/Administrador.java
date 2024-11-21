@@ -20,7 +20,7 @@ import static Enumeracion.Franquicia.STARTREK;
 
 /**
  *
- * @author HP
+ * @author diego
  */
 public class Administrador extends Thread {
 

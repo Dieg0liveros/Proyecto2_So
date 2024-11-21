@@ -84,7 +84,7 @@ public class Cola {
             setBack(newNodo);
 
         } else {
-            getBack().setpNext(newNodo);
+            getBack().setNext(newNodo);
             setBack(newNodo);
 
         }
@@ -93,13 +93,13 @@ public class Cola {
     }
 
     public void queue(Nodo newNodo) {
-        newNodo.setpNext(null);
+        newNodo.setNext(null);
         if (isEmpty()) {
             setFront(newNodo);
             setBack(newNodo);
 
         } else {
-            getBack().setpNext(newNodo);
+            getBack().setNext(newNodo);
             setBack(newNodo);
 
         }
@@ -112,7 +112,7 @@ public class Cola {
         if (!isEmpty()) {
             ret = getFront();
 
-            setFront(getFront().getpNext());
+            setFront(getFront().getNext());
             setSize(getSize() - 1);
 
         }

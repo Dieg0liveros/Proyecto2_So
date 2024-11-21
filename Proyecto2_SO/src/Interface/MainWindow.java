@@ -361,18 +361,18 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel1.add(simSpeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 110, -1));
 
         strekCharacterImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        strekCharacterImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto2_so/NickImages/Appa.png"))); // NOI18N
+        strekCharacterImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StartrekImagenes/AverageCardStrek.png"))); // NOI18N
         jPanel1.add(strekCharacterImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 110, -1));
 
         swarsPersonajeImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        swarsPersonajeImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto2_so/NickImages/Appa.png"))); // NOI18N
+        swarsPersonajeImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsImagenes/AverageCardAvatar.png"))); // NOI18N
         jPanel1.add(swarsPersonajeImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 120, -1));
 
-        swarsTarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto2_so/NickImages/AverageCardAvatar.png"))); // NOI18N
+        swarsTarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsImagenes/AverageCardAvatar.png"))); // NOI18N
         jPanel1.add(swarsTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 140, 220));
 
         StrekPersonajeCard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        StrekPersonajeCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto2_so/CartoonImages/DeficientCardRegShow.png"))); // NOI18N
+        StrekPersonajeCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StartrekImagenes/AverageCardStrek.png"))); // NOI18N
         jPanel1.add(StrekPersonajeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 150, 190));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 580));

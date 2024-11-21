@@ -12,7 +12,7 @@ import Sistema.Administrador;
 import Sistema.Procesador;
 /**
  *
- * @author andre
+ * @author chris
  */
 public class Init {
     MainWindow main;
