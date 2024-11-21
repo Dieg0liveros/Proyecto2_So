@@ -36,7 +36,6 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         startSim = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -64,13 +63,15 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane12 = new javax.swing.JScrollPane();
         effortStrek = new javax.swing.JList<>();
         winnersStrek = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         IDswarsP = new javax.swing.JLabel();
         IDStrekP = new javax.swing.JLabel();
         winnersSwars = new javax.swing.JLabel();
         IDcartoonText = new javax.swing.JLabel();
         IDtextNick = new javax.swing.JLabel();
         fighterStrek = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         fighterSwars = new javax.swing.JLabel();
         stateAI = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -79,51 +80,54 @@ public class MainWindow extends javax.swing.JFrame {
         swarsPersonajeImagen = new javax.swing.JLabel();
         swarsTarjeta = new javax.swing.JLabel();
         StrekPersonajeCard = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(140, 540));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(230, 225, 197));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setFont(new java.awt.Font("Bodoni MT Poster Compressed", 0, 12)); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        startSim.setBackground(new java.awt.Color(201, 124, 93));
-        startSim.setFont(new java.awt.Font("Barlow Condensed ExtraBold", 1, 14)); // NOI18N
-        startSim.setForeground(new java.awt.Color(225, 229, 197));
+        startSim.setBackground(new java.awt.Color(255, 0, 51));
+        startSim.setFont(new java.awt.Font("Trebuchet MS", 1, 30)); // NOI18N
+        startSim.setForeground(new java.awt.Color(255, 255, 255));
         startSim.setText("Iniciar Simulacion");
-        startSim.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(201, 124, 93), 5, true));
+        startSim.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         startSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startSimActionPerformed(evt);
             }
         });
-        jPanel1.add(startSim, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 150, 50));
+        jPanel1.add(startSim, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, 280, 60));
 
         jSeparator1.setForeground(new java.awt.Color(54, 57, 59));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 10, 400));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 230, 10, 400));
 
-        jSeparator2.setForeground(new java.awt.Color(54, 57, 59));
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 70, 400));
-
-        jLabel3.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel3.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Ganadores");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, -1, 30));
+        jLabel3.setOpaque(true);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 150, 40));
 
-        jLabel4.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel4.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Nivel 1");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, 30));
+        jLabel4.setOpaque(true);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 130, 30));
 
         jScrollPane4.setBorder(null);
 
-        tier1Swars.setBackground(new java.awt.Color(230, 225, 197));
+        tier1Swars.setBackground(new java.awt.Color(0, 102, 204));
         tier1Swars.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier1Swars.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        tier1Swars.setForeground(new java.awt.Color(54, 57, 59));
+        tier1Swars.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier1Swars.setForeground(new java.awt.Color(255, 255, 255));
         tier1Swars.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -131,14 +135,14 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(tier1Swars);
 
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 150, 100));
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, 150, 100));
 
         jScrollPane5.setBorder(null);
 
-        tier3Nick.setBackground(new java.awt.Color(230, 225, 197));
+        tier3Nick.setBackground(new java.awt.Color(0, 102, 204));
         tier3Nick.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier3Nick.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        tier3Nick.setForeground(new java.awt.Color(54, 57, 59));
+        tier3Nick.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier3Nick.setForeground(new java.awt.Color(255, 255, 255));
         tier3Nick.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -146,24 +150,30 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(tier3Nick);
 
-        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 150, 100));
+        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 150, 100));
 
-        jLabel5.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel5.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Nivel 3");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, 30));
+        jLabel5.setOpaque(true);
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, 130, 30));
 
-        jLabel6.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel6.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Nivel 2");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, -1, 30));
+        jLabel6.setOpaque(true);
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, 130, 30));
 
         jScrollPane8.setBorder(null);
 
-        tier2Swars.setBackground(new java.awt.Color(230, 225, 197));
+        tier2Swars.setBackground(new java.awt.Color(0, 102, 204));
         tier2Swars.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier2Swars.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        tier2Swars.setForeground(new java.awt.Color(54, 57, 59));
+        tier2Swars.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier2Swars.setForeground(new java.awt.Color(255, 255, 255));
         tier2Swars.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -171,19 +181,22 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane8.setViewportView(tier2Swars);
 
-        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 150, 100));
+        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, 150, 100));
 
-        jLabel8.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel8.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Refuerzo");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, -1, 30));
+        jLabel8.setOpaque(true);
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 640, 130, 30));
 
         jScrollPane9.setBorder(null);
 
-        effortSwars.setBackground(new java.awt.Color(230, 225, 197));
+        effortSwars.setBackground(new java.awt.Color(0, 102, 204));
         effortSwars.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        effortSwars.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        effortSwars.setForeground(new java.awt.Color(54, 57, 59));
+        effortSwars.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        effortSwars.setForeground(new java.awt.Color(255, 255, 255));
         effortSwars.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -191,24 +204,30 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane9.setViewportView(effortSwars);
 
-        jPanel1.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 150, 100));
+        jPanel1.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 150, 100));
 
-        jLabel7.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel7.setBackground(new java.awt.Color(255, 153, 51));
+        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Ganadores");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, -1, 30));
+        jLabel7.setOpaque(true);
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 240, 140, 40));
 
-        jLabel9.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel9.setBackground(new java.awt.Color(255, 153, 51));
+        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Nivel 1");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, -1, 30));
+        jLabel9.setOpaque(true);
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 470, 130, 30));
 
         jScrollPane7.setBorder(null);
 
-        tier1StarTrek.setBackground(new java.awt.Color(230, 225, 197));
+        tier1StarTrek.setBackground(new java.awt.Color(255, 153, 51));
         tier1StarTrek.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier1StarTrek.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        tier1StarTrek.setForeground(new java.awt.Color(54, 57, 59));
+        tier1StarTrek.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier1StarTrek.setForeground(new java.awt.Color(255, 255, 255));
         tier1StarTrek.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -216,19 +235,22 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(tier1StarTrek);
 
-        jPanel1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 300, 150, 100));
+        jPanel1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 520, 150, 100));
 
-        jLabel10.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel10.setBackground(new java.awt.Color(255, 153, 51));
+        jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Nivel 3");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, -1, 30));
+        jLabel10.setOpaque(true);
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 640, 130, 30));
 
         jScrollPane10.setBorder(null);
 
-        tier3Strek.setBackground(new java.awt.Color(230, 225, 197));
+        tier3Strek.setBackground(new java.awt.Color(255, 153, 51));
         tier3Strek.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier3Strek.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        tier3Strek.setForeground(new java.awt.Color(54, 57, 59));
+        tier3Strek.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier3Strek.setForeground(new java.awt.Color(255, 255, 255));
         tier3Strek.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -236,19 +258,22 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(tier3Strek);
 
-        jPanel1.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 430, 150, 100));
+        jPanel1.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 690, 150, 100));
 
-        jLabel11.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel11.setBackground(new java.awt.Color(255, 153, 51));
+        jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Nivel 2");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 270, -1, 30));
+        jLabel11.setOpaque(true);
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 470, 130, 30));
 
         jScrollPane11.setBorder(null);
 
-        tier2Strek.setBackground(new java.awt.Color(230, 225, 197));
+        tier2Strek.setBackground(new java.awt.Color(255, 153, 51));
         tier2Strek.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier2Strek.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        tier2Strek.setForeground(new java.awt.Color(54, 57, 59));
+        tier2Strek.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier2Strek.setForeground(new java.awt.Color(255, 255, 255));
         tier2Strek.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -256,19 +281,22 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane11.setViewportView(tier2Strek);
 
-        jPanel1.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 300, 150, 100));
+        jPanel1.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 520, 150, 100));
 
-        jLabel12.setFont(new java.awt.Font("Barlow Condensed Black", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel12.setBackground(new java.awt.Color(255, 153, 51));
+        jLabel12.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Refuerzo");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 400, -1, 30));
+        jLabel12.setOpaque(true);
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 640, 130, 30));
 
         jScrollPane12.setBorder(null);
 
-        effortStrek.setBackground(new java.awt.Color(230, 225, 197));
+        effortStrek.setBackground(new java.awt.Color(255, 153, 51));
         effortStrek.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        effortStrek.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        effortStrek.setForeground(new java.awt.Color(54, 57, 59));
+        effortStrek.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        effortStrek.setForeground(new java.awt.Color(255, 255, 255));
         effortStrek.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -276,80 +304,101 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane12.setViewportView(effortStrek);
 
-        jPanel1.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 430, 150, 100));
+        jPanel1.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 690, 150, 100));
 
-        winnersStrek.setBackground(new java.awt.Color(145, 178, 228));
-        winnersStrek.setFont(new java.awt.Font("Barlow Condensed ExtraBold", 0, 48)); // NOI18N
+        winnersStrek.setBackground(new java.awt.Color(255, 153, 51));
+        winnersStrek.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
         winnersStrek.setForeground(new java.awt.Color(230, 225, 197));
         winnersStrek.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         winnersStrek.setText("0");
         winnersStrek.setOpaque(true);
-        jPanel1.add(winnersStrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 190, 90, -1));
+        jPanel1.add(winnersStrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 90, -1));
 
-        IDswarsP.setFont(new java.awt.Font("Barlow Condensed", 1, 14)); // NOI18N
-        IDswarsP.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/d610ebba0cc387e20ea5fdb3a0e6b376.png"))); // NOI18N
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, 120, 150));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/Star-Trek-Logo.png"))); // NOI18N
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, 220, 180));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/star-wars-logo-3-1.png"))); // NOI18N
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 400, 140));
+
+        IDswarsP.setBackground(new java.awt.Color(0, 0, 153));
+        IDswarsP.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        IDswarsP.setForeground(new java.awt.Color(255, 255, 255));
         IDswarsP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         IDswarsP.setText("None");
-        jPanel1.add(IDswarsP, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, 40, -1));
+        IDswarsP.setOpaque(true);
+        jPanel1.add(IDswarsP, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 70, 30));
 
-        IDStrekP.setFont(new java.awt.Font("Barlow Condensed", 1, 14)); // NOI18N
-        IDStrekP.setForeground(new java.awt.Color(54, 57, 59));
+        IDStrekP.setBackground(new java.awt.Color(255, 153, 51));
+        IDStrekP.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        IDStrekP.setForeground(new java.awt.Color(255, 255, 255));
         IDStrekP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         IDStrekP.setText("None");
-        jPanel1.add(IDStrekP, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 40, -1));
+        IDStrekP.setOpaque(true);
+        jPanel1.add(IDStrekP, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 400, 60, 30));
 
-        winnersSwars.setBackground(new java.awt.Color(145, 178, 228));
-        winnersSwars.setFont(new java.awt.Font("Barlow Condensed ExtraBold", 0, 48)); // NOI18N
+        winnersSwars.setBackground(new java.awt.Color(0, 102, 204));
+        winnersSwars.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
         winnersSwars.setForeground(new java.awt.Color(230, 225, 197));
         winnersSwars.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         winnersSwars.setText("0");
         winnersSwars.setOpaque(true);
-        jPanel1.add(winnersSwars, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 90, -1));
+        jPanel1.add(winnersSwars, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 90, -1));
 
-        IDcartoonText.setFont(new java.awt.Font("Barlow Condensed", 1, 14)); // NOI18N
-        IDcartoonText.setForeground(new java.awt.Color(54, 57, 59));
+        IDcartoonText.setBackground(new java.awt.Color(255, 153, 51));
+        IDcartoonText.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        IDcartoonText.setForeground(new java.awt.Color(255, 255, 255));
         IDcartoonText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         IDcartoonText.setText("ID:");
-        jPanel1.add(IDcartoonText, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, 40, -1));
+        IDcartoonText.setOpaque(true);
+        jPanel1.add(IDcartoonText, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 400, 40, 30));
 
-        IDtextNick.setFont(new java.awt.Font("Barlow Condensed", 1, 14)); // NOI18N
-        IDtextNick.setForeground(new java.awt.Color(54, 57, 59));
+        IDtextNick.setBackground(new java.awt.Color(0, 0, 153));
+        IDtextNick.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        IDtextNick.setForeground(new java.awt.Color(255, 255, 255));
         IDtextNick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         IDtextNick.setText("ID:");
-        jPanel1.add(IDtextNick, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 30, -1));
+        IDtextNick.setOpaque(true);
+        jPanel1.add(IDtextNick, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 40, 30));
 
-        fighterStrek.setFont(new java.awt.Font("Barlow Condensed", 1, 14)); // NOI18N
-        fighterStrek.setForeground(new java.awt.Color(54, 57, 59));
+        fighterStrek.setBackground(new java.awt.Color(255, 153, 51));
+        fighterStrek.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        fighterStrek.setForeground(new java.awt.Color(255, 255, 255));
         fighterStrek.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fighterStrek.setText("Nombre Strek");
-        jPanel1.add(fighterStrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 359, 130, 30));
+        fighterStrek.setOpaque(true);
+        jPanel1.add(fighterStrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 360, 180, 30));
 
-        jLabel16.setFont(new java.awt.Font("Barlow Condensed Black", 2, 24)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(201, 124, 93));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("VS");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, 40, -1));
-
-        fighterSwars.setFont(new java.awt.Font("Barlow Condensed", 1, 14)); // NOI18N
-        fighterSwars.setForeground(new java.awt.Color(54, 57, 59));
+        fighterSwars.setBackground(new java.awt.Color(0, 0, 153));
+        fighterSwars.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        fighterSwars.setForeground(new java.awt.Color(255, 255, 255));
         fighterSwars.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fighterSwars.setText("Nombre Swars");
-        jPanel1.add(fighterSwars, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 120, -1));
+        fighterSwars.setOpaque(true);
+        jPanel1.add(fighterSwars, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 190, 30));
 
-        stateAI.setFont(new java.awt.Font("Barlow Condensed Black", 0, 24)); // NOI18N
-        stateAI.setForeground(new java.awt.Color(54, 57, 59));
+        stateAI.setBackground(new java.awt.Color(255, 0, 51));
+        stateAI.setFont(new java.awt.Font("Trebuchet MS", 1, 30)); // NOI18N
+        stateAI.setForeground(new java.awt.Color(255, 255, 255));
         stateAI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stateAI.setText("Decidiendo");
-        jPanel1.add(stateAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 220, -1));
+        stateAI.setOpaque(true);
+        jPanel1.add(stateAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 240, 50));
 
-        jLabel2.setFont(new java.awt.Font("Barlow Condensed ExtraBold", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(54, 57, 59));
+        jLabel2.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 3, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Velocidad de Simulacion");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, -1, -1));
+        jLabel2.setOpaque(true);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 680, 250, 30));
 
-        simSpeed.setBackground(new java.awt.Color(225, 229, 197));
-        simSpeed.setFont(new java.awt.Font("Barlow Condensed", 0, 12)); // NOI18N
-        simSpeed.setForeground(new java.awt.Color(54, 57, 59));
+        simSpeed.setBackground(new java.awt.Color(255, 0, 51));
+        simSpeed.setFont(new java.awt.Font("Barlow Condensed", 0, 18)); // NOI18N
+        simSpeed.setForeground(new java.awt.Color(255, 255, 255));
         simSpeed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.25", "0.5", "1", "1.5", "2", "2.5", "3" }));
         simSpeed.setSelectedIndex(2);
         simSpeed.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(54, 57, 59)));
@@ -358,24 +407,29 @@ public class MainWindow extends javax.swing.JFrame {
                 simSpeedActionPerformed(evt);
             }
         });
-        jPanel1.add(simSpeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 110, -1));
+        jPanel1.add(simSpeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 720, 110, -1));
 
         strekCharacterImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        strekCharacterImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StartrekImagenes/AverageCardStrek.png"))); // NOI18N
-        jPanel1.add(strekCharacterImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 110, -1));
+        strekCharacterImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/Star_Trek_Customizable_Card_Game_cardback.jpg"))); // NOI18N
+        jPanel1.add(strekCharacterImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 50, 220, 300));
 
         swarsPersonajeImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        swarsPersonajeImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsImagenes/AverageCardAvatar.png"))); // NOI18N
-        jPanel1.add(swarsPersonajeImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 120, -1));
+        swarsPersonajeImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/file.png"))); // NOI18N
+        jPanel1.add(swarsPersonajeImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 220, 300));
 
-        swarsTarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsImagenes/AverageCardAvatar.png"))); // NOI18N
-        jPanel1.add(swarsTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 140, 220));
+        swarsTarjeta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        swarsTarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/file.png"))); // NOI18N
+        jPanel1.add(swarsTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 220, 300));
 
         StrekPersonajeCard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        StrekPersonajeCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StartrekImagenes/AverageCardStrek.png"))); // NOI18N
-        jPanel1.add(StrekPersonajeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 150, 190));
+        StrekPersonajeCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/Star_Trek_Customizable_Card_Game_cardback.jpg"))); // NOI18N
+        jPanel1.add(StrekPersonajeCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 50, 220, 300));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 580));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/fondo.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -4, 1310, 840));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 840));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -408,10 +462,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JList<String> effortSwars;
     private javax.swing.JLabel fighterStrek;
     private javax.swing.JLabel fighterSwars;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -430,7 +487,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JComboBox<String> simSpeed;
     private javax.swing.JButton startSim;
     private javax.swing.JLabel stateAI;
