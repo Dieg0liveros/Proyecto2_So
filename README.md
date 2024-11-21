@@ -1,1 +1,1 @@
-# Proyecto2_SO_Bazzi_Rivas
+# Proyecto2_Diaz_Oliveros
