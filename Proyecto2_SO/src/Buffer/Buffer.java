@@ -320,6 +320,9 @@ public class Buffer {
         this.simLoad = simLoad;
     }
     
+    public String getItemActual(Personaje personaje) {
+        return personaje != null ? personaje.getItem() : "Ningún ítem asignado";
+    }
     
     
 }

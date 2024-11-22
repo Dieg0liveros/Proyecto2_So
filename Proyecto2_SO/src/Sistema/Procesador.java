@@ -60,10 +60,14 @@ public class Procesador extends Thread {
 
                 //Después de escoger los luchadores, colocarlos en el mainWindow
                 if (swarsFighter != null && strekFighter != null) {
-                    System.out.println(swarsFighter.getNombre() + "vs" + strekFighter.getNombre());
+                    System.out.println(swarsFighter.getNombre() + " vs " + strekFighter.getNombre());
                     getMainWindow().getFighterSwars().setText(swarsFighter.getNombre());
                     getMainWindow().getFighterStrek().setText(strekFighter.getNombre());
-
+                    String swarsItem = swarsFighter.getItem();
+                    String strekItem = strekFighter.getItem();
+                    getMainWindow().getItemSW().setText(swarsItem);
+                    getMainWindow().getItemST().setText(strekItem);
+                    
                     //ImageIcon card = new ImageIcon(getTipoTarjeta(swarsFighter.getTipo(), swarsFighter.getFranquicia()));
                     //getMainWindow().getSwarsTarjeta().setIcon(card);
                     //card = new ImageIcon(getTipoTarjeta(strekFighter.getTipo(), strekFighter.getFranquicia()));

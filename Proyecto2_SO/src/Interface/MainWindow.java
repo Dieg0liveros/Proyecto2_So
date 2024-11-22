@@ -5,15 +5,16 @@
 package Interface;
 
 import Buffer.Buffer;
+import javax.swing.JLabel;
 import proyecto2.Init;
 
 
 /**
  *
- * @author andre
+ * @author chris
  */
 public class MainWindow extends javax.swing.JFrame {
-    
+
     Buffer buffer;
 
     /**
@@ -22,8 +23,10 @@ public class MainWindow extends javax.swing.JFrame {
     public MainWindow(Buffer buffer) {
         initComponents();
         this.buffer=buffer;
-       
+        customizeLabels();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -63,6 +66,10 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane12 = new javax.swing.JScrollPane();
         effortStrek = new javax.swing.JList<>();
         winnersStrek = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        ItemSW = new javax.swing.JLabel();
+        ItemST = new javax.swing.JLabel();
         winnersSwars = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -116,7 +123,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Nivel 1");
         jLabel4.setOpaque(true);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 130, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 140, 30));
 
         jScrollPane4.setBorder(null);
 
@@ -131,7 +138,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(tier1Swars);
 
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, 150, 100));
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, 160, 100));
 
         jScrollPane5.setBorder(null);
 
@@ -146,7 +153,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(tier3Swars);
 
-        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 150, 100));
+        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 160, 100));
 
         jLabel5.setBackground(new java.awt.Color(0, 102, 204));
         jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -154,7 +161,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Nivel 3");
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, 130, 30));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, 140, 30));
 
         jLabel6.setBackground(new java.awt.Color(0, 102, 204));
         jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -162,7 +169,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Nivel 2");
         jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, 130, 30));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, 140, 30));
 
         jScrollPane8.setBorder(null);
 
@@ -177,7 +184,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane8.setViewportView(tier2Swars);
 
-        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, 150, 100));
+        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, 160, 100));
 
         jLabel8.setBackground(new java.awt.Color(0, 102, 204));
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -185,7 +192,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Refuerzo");
         jLabel8.setOpaque(true);
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 640, 130, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 640, 140, 30));
 
         jScrollPane9.setBorder(null);
 
@@ -200,7 +207,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane9.setViewportView(effortSwars);
 
-        jPanel1.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 150, 100));
+        jPanel1.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 160, 100));
 
         jLabel7.setBackground(new java.awt.Color(255, 153, 51));
         jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -216,7 +223,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Nivel 1");
         jLabel9.setOpaque(true);
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 470, 130, 30));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 470, 140, 30));
 
         jScrollPane7.setBorder(null);
 
@@ -231,7 +238,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(tier1StarTrek);
 
-        jPanel1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 520, 150, 100));
+        jPanel1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 520, 160, 100));
 
         jLabel10.setBackground(new java.awt.Color(255, 153, 51));
         jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -239,7 +246,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Nivel 3");
         jLabel10.setOpaque(true);
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 640, 130, 30));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 640, 140, 30));
 
         jScrollPane10.setBorder(null);
 
@@ -254,7 +261,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(tier3Strek);
 
-        jPanel1.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 690, 150, 100));
+        jPanel1.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 690, 160, 100));
 
         jLabel11.setBackground(new java.awt.Color(255, 153, 51));
         jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -262,7 +269,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Nivel 2");
         jLabel11.setOpaque(true);
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 470, 130, 30));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 470, 140, 30));
 
         jScrollPane11.setBorder(null);
 
@@ -277,7 +284,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane11.setViewportView(tier2Strek);
 
-        jPanel1.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 520, 150, 100));
+        jPanel1.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 520, 160, 100));
 
         jLabel12.setBackground(new java.awt.Color(255, 153, 51));
         jLabel12.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -285,7 +292,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Refuerzo");
         jLabel12.setOpaque(true);
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 640, 130, 30));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 640, 140, 30));
 
         jScrollPane12.setBorder(null);
 
@@ -300,7 +307,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jScrollPane12.setViewportView(effortStrek);
 
-        jPanel1.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 690, 150, 100));
+        jPanel1.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 690, 160, 100));
 
         winnersStrek.setBackground(new java.awt.Color(255, 153, 51));
         winnersStrek.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
@@ -309,6 +316,34 @@ public class MainWindow extends javax.swing.JFrame {
         winnersStrek.setText("0");
         winnersStrek.setOpaque(true);
         jPanel1.add(winnersStrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 90, -1));
+
+        jLabel17.setBackground(new java.awt.Color(255, 153, 51));
+        jLabel17.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Item: ");
+        jLabel17.setOpaque(true);
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 410, 70, 30));
+
+        jLabel16.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel16.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Item: ");
+        jLabel16.setOpaque(true);
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 70, 30));
+
+        ItemSW.setBackground(new java.awt.Color(0, 102, 204));
+        ItemSW.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ItemSW.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemSW.setOpaque(true);
+        jPanel1.add(ItemSW, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 190, 30));
+
+        ItemST.setBackground(new java.awt.Color(255, 153, 51));
+        ItemST.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ItemST.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemST.setOpaque(true);
+        jPanel1.add(ItemST, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 190, 30));
 
         winnersSwars.setBackground(new java.awt.Color(0, 102, 204));
         winnersSwars.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
@@ -453,6 +488,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel ID2;
     private javax.swing.JLabel IDStrekP;
     private javax.swing.JLabel IDswarsP;
+    private javax.swing.JLabel ItemST;
+    private javax.swing.JLabel ItemSW;
     private javax.swing.JLabel StrekPersonajeCard;
     private javax.swing.JList<String> effortStrek;
     private javax.swing.JList<String> effortSwars;
@@ -465,6 +502,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -499,7 +538,21 @@ public class MainWindow extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
    
+    private void customizeLabels() {
+        // Set properties for ItemSW
+        ItemSW.setOpaque(true);
+        ItemSW.setBackground(new java.awt.Color(0, 102, 204));
+        ItemSW.setForeground(new java.awt.Color(221, 221, 221));
+        ItemSW.setFont(new java.awt.Font("Arial Rounded MT Bold", java.awt.Font.PLAIN, 12));
 
+        // Set properties for ItemST
+        ItemST.setOpaque(true);
+        ItemST.setBackground(new java.awt.Color(255, 153, 51));
+        ItemST.setForeground(new java.awt.Color(221, 221, 221));
+        ItemST.setFont(new java.awt.Font("Arial Rounded MT Bold", java.awt.Font.PLAIN, 12));
+    }
+
+    
 
     public javax.swing.JLabel getStrekPersonajeCard() {
         return StrekPersonajeCard;
@@ -676,4 +729,13 @@ public class MainWindow extends javax.swing.JFrame {
     public javax.swing.JLabel getIDStrekP() {
         return IDStrekP;
     }
+    
+    public JLabel getItemSW() {
+        return ItemSW;
+    }
+
+    public JLabel getItemST() {
+        return ItemST;
+    }
+    
 }

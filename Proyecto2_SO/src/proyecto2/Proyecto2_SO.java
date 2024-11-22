@@ -7,10 +7,7 @@ package proyecto2;
 import Buffer.Buffer;
 import Interface.MainWindow;
 
-/**
- *
- * @author andre
- */
+
 public class Proyecto2_SO {
 
     /**
