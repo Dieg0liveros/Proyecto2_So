@@ -7,6 +7,7 @@ package Interface;
 import Buffer.Buffer;
 import proyecto2.Init;
 
+
 /**
  *
  * @author andre
@@ -35,7 +36,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         startSim = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -63,12 +63,12 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane12 = new javax.swing.JScrollPane();
         effortStrek = new javax.swing.JList<>();
         winnersStrek = new javax.swing.JLabel();
+        winnersSwars = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         IDswarsP = new javax.swing.JLabel();
         IDStrekP = new javax.swing.JLabel();
-        winnersSwars = new javax.swing.JLabel();
         IDcartoonText = new javax.swing.JLabel();
         IDtextNick = new javax.swing.JLabel();
         fighterStrek = new javax.swing.JLabel();
@@ -101,10 +101,6 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
         jPanel1.add(startSim, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, 280, 60));
-
-        jSeparator1.setForeground(new java.awt.Color(54, 57, 59));
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 230, 10, 400));
 
         jLabel3.setBackground(new java.awt.Color(0, 102, 204));
         jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -314,6 +310,14 @@ public class MainWindow extends javax.swing.JFrame {
         winnersStrek.setOpaque(true);
         jPanel1.add(winnersStrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 90, -1));
 
+        winnersSwars.setBackground(new java.awt.Color(0, 102, 204));
+        winnersSwars.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
+        winnersSwars.setForeground(new java.awt.Color(230, 225, 197));
+        winnersSwars.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        winnersSwars.setText("0");
+        winnersSwars.setOpaque(true);
+        jPanel1.add(winnersSwars, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 90, -1));
+
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AssetsVarios/d610ebba0cc387e20ea5fdb3a0e6b376.png"))); // NOI18N
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, 120, 150));
@@ -339,14 +343,6 @@ public class MainWindow extends javax.swing.JFrame {
         IDStrekP.setText("None");
         IDStrekP.setOpaque(true);
         jPanel1.add(IDStrekP, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 400, 60, 30));
-
-        winnersSwars.setBackground(new java.awt.Color(0, 102, 204));
-        winnersSwars.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
-        winnersSwars.setForeground(new java.awt.Color(230, 225, 197));
-        winnersSwars.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        winnersSwars.setText("0");
-        winnersSwars.setOpaque(true);
-        jPanel1.add(winnersSwars, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 90, -1));
 
         IDcartoonText.setBackground(new java.awt.Color(255, 153, 51));
         IDcartoonText.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -486,7 +482,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JComboBox<String> simSpeed;
     private javax.swing.JButton startSim;
     private javax.swing.JLabel stateAI;

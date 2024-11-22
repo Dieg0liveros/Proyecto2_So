@@ -13,6 +13,9 @@ import Personaje.Personaje;
 import Enumeracion.Franquicia;
 import Enumeracion.TierEnum;
 import Enumeracion.TipoEnum;
+import EDD.Map;
+import EDD.HashMap;
+
 
 /**
  *
@@ -61,10 +64,10 @@ public class Procesador extends Thread {
                     getMainWindow().getFighterSwars().setText(swarsFighter.getNombre());
                     getMainWindow().getFighterStrek().setText(strekFighter.getNombre());
 
-                    ImageIcon card = new ImageIcon(getTipoTarjeta(swarsFighter.getTipo(), swarsFighter.getFranquicia()));
-                    getMainWindow().getSwarsTarjeta().setIcon(card);
-                    card = new ImageIcon(getTipoTarjeta(strekFighter.getTipo(), strekFighter.getFranquicia()));
-                    getMainWindow().getStrekPersonajeCard().setIcon(card);
+                    //ImageIcon card = new ImageIcon(getTipoTarjeta(swarsFighter.getTipo(), swarsFighter.getFranquicia()));
+                    //getMainWindow().getSwarsTarjeta().setIcon(card);
+                    //card = new ImageIcon(getTipoTarjeta(strekFighter.getTipo(), strekFighter.getFranquicia()));
+                    //getMainWindow().getStrekPersonajeCard().setIcon(card);
 
                     ImageIcon icon = new ImageIcon(swarsFighter.getImgPath());
                     getMainWindow().getSwarsPersonajeImagen().setIcon(icon);
@@ -83,16 +86,17 @@ public class Procesador extends Thread {
                         if (result) {
                             getBuffer().getSWARSWinners().cola(swarsFighter, swarsFighter.getId(), 0);
                             getMainWindow().getStateAI().setText("Star Wars Gana");
-                            int nickWins = Integer.parseInt(getMainWindow().getWinnersSwars().getText());
-                            nickWins++;
-                            getMainWindow().getWinnersSwars().setText(String.valueOf(nickWins));
+                            int swWins = Integer.parseInt(getMainWindow().getWinnersSwars().getText());
+                            swWins++;
+                            getMainWindow().getWinnersSwars().setText(String.valueOf(swWins));
+                            
                             
                         } else {
                             getBuffer().getSTREKWinners().cola(strekFighter, swarsFighter.getId(), 0);
                             getMainWindow().getStateAI().setText("Star Trek Gana");
-                            int cartoonWins = Integer.parseInt(getMainWindow().getWinnersStrek().getText());
-                            cartoonWins++;
-                            getMainWindow().getWinnersStrek().setText(String.valueOf(cartoonWins));
+                            int stWins = Integer.parseInt(getMainWindow().getWinnersStrek().getText());
+                            stWins++;
+                            getMainWindow().getWinnersStrek().setText(String.valueOf(stWins));
                             
                         }
                         getBuffer().setSWARSFighter(null);
@@ -133,70 +137,59 @@ public class Procesador extends Thread {
 
     public boolean elegirGanador(Personaje swars, Personaje strek) {
         if (swars.getTipo().getId() > strek.getTipo().getId()) {
-            return true;
+            return true; // Gana Star Wars si su tipo tiene mayor ID
         } else if (swars.getTipo().getId() < strek.getTipo().getId()) {
-            return false;
+            return false; // Gana Star Trek si su tipo tiene menor ID
         } else {
-            //si tienen el mismo tipo, coin toss
-            int wins = 0;
-            for (int i = 0; i < 3; i++) {
-                double rand = Math.random();
-                wins = (rand < 0.5) ? wins + 1 : wins - 1;
-            }
-            if (wins > 0) {
-                return true;
-            } else if (wins < 0) {
-                return false;
+            // Mismo tipo: desempate con piedra, papel o tijeras
+            Map<String, String> reglas = new HashMap<>();
+            // Ítems de Star Wars
+            reglas.put("Sable de luz", "Tijera");
+            reglas.put("Bláster E-11", "Piedra");
+            reglas.put("Destructor Estelar", "Papel");
+            // Ítems de Star Trek
+            reglas.put("Faser", "Tijera");
+            reglas.put("Torpedo de fotones", "Piedra");
+            reglas.put("Escudo Deflector", "Papel");
 
-            } else {
-                //muerte subita
-                double rand = Math.random();
-                if (rand < 0.5) {
-                    return true;
-                } else {
-                    return false;
+            String itemSW = swars.getItem();
+            String itemST = strek.getItem();
+
+            String movimientoSW = reglas.get(itemSW);
+            String movimientoST = reglas.get(itemST);
+
+            if (movimientoSW.equals(movimientoST)) {
+                // Empate en piedra, papel o tijeras -> Coin Toss
+                int wins = 0;
+                for (int i = 0; i < 3; i++) {
+                    double rand = Math.random();
+                    wins = (rand < 0.5) ? wins + 1 : wins - 1;
                 }
+                if (wins > 0) {
+                    return true; // Gana Star Wars
+                } else if (wins < 0) {
+                    return false; // Gana Star Trek
+                } else {
+                    // Muerte súbita
+                    double rand = Math.random();
+                    return rand < 0.5;
+                }
+            } else if ((movimientoSW.equals("Piedra") && movimientoST.equals("Tijera")) ||
+                       (movimientoSW.equals("Papel") && movimientoST.equals("Piedra")) ||
+                       (movimientoSW.equals("Tijera") && movimientoST.equals("Papel"))) {
+                return true; // Gana Star Wars
+            } else {
+                return false; // Gana Star Trek
             }
-
         }
     }
 
     
 
-    public String getTipoTarjeta(TipoEnum tipo, Franquicia comp) {
-        switch (comp) {
-            case STARWARS:
-                switch (tipo) {
-                    case MASTER:
-                        return "src\\proyecto2_so\\StarWarsImagenes\\MasterCardAvatar.png";
-                    case SKILLED:
-                        return "src\\proyecto2_so\\StarWarsImagenes\\SkilledCardAvatar.png";
-                    case AVERAGE:
-                        return "src\\proyecto2_so\\StarWarsImagenes\\AverageCardAvatar.png";
-                    case DEFICIENT:
-                        return "src\\proyecto2_so\\StarWarsImagenes\\DeficientCardAvatar.png";
-                    case WEAK:
-                        return "src\\proyecto2_so\\StarWarsImagenes\\WeakCardAvatar.png";
 
-                }
-                break;
-            case STARTREK:
-                switch (tipo) {
-                    case MASTER:
-                        return "src\\proyecto2_so\\StarTrekImagenes\\MasterCardStrek.png";
-                    case SKILLED:
-                        return "src\\proyecto2_so\\StarTrekImagenes\\SkilledCardStrek.png";
-                    case AVERAGE:
-                        return "src\\proyecto2_so\\StarTrekImagenes\\AverageCardStrek.png";
-                    case DEFICIENT:
-                        return "src\\proyecto2_so\\StarTrekImagenes\\DeficientCardStrek.png";
-                    case WEAK:
-                        return "src\\proyecto2_so\\StarTrekImagenes\\WeakCardStrek.png";
+    
 
-                }
-        }
-        return "";
-    }
+    
 
     /**
      * @return the buffer

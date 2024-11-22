@@ -8,10 +8,6 @@ import java.util.concurrent.Semaphore;
 import EDD.Cola;
 import Personaje.Personaje;
 
-/**
- *
- * @author andre
- */
 public class Buffer {
     
     
@@ -23,19 +19,19 @@ public class Buffer {
     private Cola SWARSWinners = new Cola();
     private Cola STREKWinners = new Cola();
     
-    //colas de Nick
+    //colas de SW
     private Cola SWARSTier1Cola = new Cola();
     private Cola SWARSTier2Cola = new Cola();
     private Cola SWARSTier3Cola = new Cola();
     private Cola SWARSEffortCola = new Cola();
     
-    //colas de Cartoon
+    //colas de ST
     private Cola STREKTier1Cola = new Cola();
     private Cola STREKTier2Cola = new Cola();
     private Cola STREKTier3Cola = new Cola();
     private Cola STREKEffortCola = new Cola();
     
-    //semaforos de sincronizacion
+    //semaforos
     private final Semaphore s1 = new Semaphore(0);
     private final Semaphore s2 = new Semaphore(0);
     
@@ -50,6 +46,11 @@ public class Buffer {
     private double simSpeed=500;
     private double nextSim = 1000;
     private double simLoad = 2000;
+    
+    
+    //lista ganadores
+    private Personaje[] SWARSPersonajesWins = new Personaje[20];
+    private Personaje[] STREKPersonajesWins = new Personaje[20];
 
     public Buffer() {
     }

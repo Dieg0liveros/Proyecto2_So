@@ -7,12 +7,20 @@ package Personaje;
 import Enumeracion.Franquicia;
 import Enumeracion.TierEnum;
 import Enumeracion.TipoEnum;
+import static Enumeracion.TipoEnum.AVERAGE;
+import static Enumeracion.TipoEnum.DEFICIENT;
+import static Enumeracion.TipoEnum.MASTER;
+import static Enumeracion.TipoEnum.SKILLED;
+import static Enumeracion.TipoEnum.WEAK;
+//import java.util.Arrays;
+//import java.util.List;
+import java.util.Random;
+import EDD.Lista;
+import EDD.Array;
 
-/**
- *
- * @author chris
- */
-public class Personaje{
+
+
+public class Personaje {
     
     private String nombre;
     private int id;
@@ -20,55 +28,51 @@ public class Personaje{
     private TierEnum tier;
     private TipoEnum tipo;
     private String imgPath;
+    private String item; // Nuevo atributo para almacenar el ítem asignado
 
     public Personaje(String name, int id, Franquicia franquicia, String imgPath) {
         this.nombre = name;
         this.id = id;
         this.franquicia = franquicia;
-        this.imgPath= imgPath;
-        //define su tipo 
+        this.imgPath = imgPath;
         this.tierTypeAlg();
+        this.item(); // Asignar ítem al inicializar
     }
-    
-    public Personaje(Personaje clone){
+
+    public Personaje(Personaje clone) {
         this.franquicia = clone.getFranquicia();
         this.nombre = clone.getNombre();
         this.tierTypeAlg();
         this.imgPath = clone.getImgPath();
+        this.item();
     }
-    
-    public void tierTypeAlg(){
+
+    public void tierTypeAlg() {
         boolean[] type = new boolean[4];
-        double[] base = {0.7,0.6,0.5,0.4};
+        double[] base = {0.7, 0.6, 0.5, 0.4};
         double prob;
         for (int i = 0; i < 4; i++) {
             prob = Math.random();
-            type[i] = (prob<=base[i]);
+            type[i] = (prob <= base[i]);
         }
-        if(type[2]&&type[3]){
+        if (type[2] && type[3]) {
             this.tipo = TipoEnum.MASTER;
-        }else if(type[2]||type[3]){
+        } else if (type[2] || type[3]) {
             this.tipo = TipoEnum.SKILLED;
-        }else if(type[1]||type[0]){
+        } else if (type[1] || type[0]) {
             this.tipo = TipoEnum.DEFICIENT;
-        }else if(!type[1]&&!type[0]){
+        } else if (!type[1] && !type[0]) {
             this.tipo = TipoEnum.WEAK;
-        }else{
+        } else {
             this.tipo = TipoEnum.AVERAGE;
         }
-        
-        
-       
-        switch(this.tipo){
+
+        switch (this.tipo) {
             case WEAK:
-                this.tier = TierEnum.THIRD;
-                break;
             case DEFICIENT:
                 this.tier = TierEnum.THIRD;
                 break;
             case AVERAGE:
-                this.tier = TierEnum.SECOND;
-                break;
             case SKILLED:
                 this.tier = TierEnum.SECOND;
                 break;
@@ -77,86 +81,75 @@ public class Personaje{
                 break;
         }
     }
-    /**
-     * @return the name
-     */
+
+    public void item() {
+        // Ítems por franquicia
+        Lista<String> starWarsItems = Array.asList("Sable de luz", "Bláster E-11", "Destructor Estelar");
+        Lista<String> starTrekItems = Array.asList("Faser", "Torpedo de fotones", "Escudo Deflector");
+
+        // Generador aleatorio
+        Random random = new Random();
+
+        // Asignación según franquicia
+        if (this.franquicia == Franquicia.STARWARS) {
+            this.item = starWarsItems.get(random.nextInt(starWarsItems.size()));
+        } else if (this.franquicia == Franquicia.STARTREK) {
+            this.item = starTrekItems.get(random.nextInt(starTrekItems.size()));
+        }
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public void setItem(String item) {
+        this.item = item;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * @param nombre the name to set
-     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the id
-     */
     public int getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * @return the company
-     */
     public Franquicia getFranquicia() {
         return franquicia;
     }
 
-    /**
-     * @param franquicia the company to set
-     */
     public void setFranquicia(Franquicia franquicia) {
         this.franquicia = franquicia;
     }
 
-    /**
-     * @return the tier
-     */
     public TierEnum getTier() {
         return tier;
     }
 
-    /**
-     * @param tier the tier to set
-     */
     public void setTier(TierEnum tier) {
         this.tier = tier;
     }
 
-    /**
-     * @return the tipo
-     */
     public TipoEnum getTipo() {
         return tipo;
     }
 
-    /**
-     * @param tipo the tipo to set
-     */
     public void setTipo(TipoEnum tipo) {
         this.tipo = tipo;
     }
 
-    /**
-     * @return the imgPath
-     */
     public String getImgPath() {
         return imgPath;
     }
 
-    /**
-     * @param imgPath the imgPath to set
-     */
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
     }

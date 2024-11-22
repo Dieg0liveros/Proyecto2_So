@@ -6,7 +6,7 @@ package Enumeracion;
 
 /**
  *
- * @author andre
+ * @author chris
  */
 public enum Franquicia {
     
