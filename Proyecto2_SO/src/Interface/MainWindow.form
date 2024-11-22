@@ -186,7 +186,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="tier3Nick">
+            <Component class="javax.swing.JList" name="tier3Swars">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -815,7 +815,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="IDcartoonText">
+        <Component class="javax.swing.JLabel" name="ID2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -836,7 +836,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="IDtextNick">
+        <Component class="javax.swing.JLabel" name="ID1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="0" red="0" type="rgb"/>

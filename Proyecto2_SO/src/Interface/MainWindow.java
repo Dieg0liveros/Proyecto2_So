@@ -41,7 +41,7 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         tier1Swars = new javax.swing.JList<>();
         jScrollPane5 = new javax.swing.JScrollPane();
-        tier3Nick = new javax.swing.JList<>();
+        tier3Swars = new javax.swing.JList<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -69,8 +69,8 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         IDswarsP = new javax.swing.JLabel();
         IDStrekP = new javax.swing.JLabel();
-        IDcartoonText = new javax.swing.JLabel();
-        IDtextNick = new javax.swing.JLabel();
+        ID2 = new javax.swing.JLabel();
+        ID1 = new javax.swing.JLabel();
         fighterStrek = new javax.swing.JLabel();
         fighterSwars = new javax.swing.JLabel();
         stateAI = new javax.swing.JLabel();
@@ -135,16 +135,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         jScrollPane5.setBorder(null);
 
-        tier3Nick.setBackground(new java.awt.Color(0, 102, 204));
-        tier3Nick.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
-        tier3Nick.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        tier3Nick.setForeground(new java.awt.Color(255, 255, 255));
-        tier3Nick.setModel(new javax.swing.AbstractListModel<String>() {
+        tier3Swars.setBackground(new java.awt.Color(0, 102, 204));
+        tier3Swars.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(54, 57, 59), 1, true));
+        tier3Swars.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tier3Swars.setForeground(new java.awt.Color(255, 255, 255));
+        tier3Swars.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane5.setViewportView(tier3Nick);
+        jScrollPane5.setViewportView(tier3Swars);
 
         jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 150, 100));
 
@@ -344,21 +344,21 @@ public class MainWindow extends javax.swing.JFrame {
         IDStrekP.setOpaque(true);
         jPanel1.add(IDStrekP, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 400, 60, 30));
 
-        IDcartoonText.setBackground(new java.awt.Color(255, 153, 51));
-        IDcartoonText.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        IDcartoonText.setForeground(new java.awt.Color(255, 255, 255));
-        IDcartoonText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IDcartoonText.setText("ID:");
-        IDcartoonText.setOpaque(true);
-        jPanel1.add(IDcartoonText, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 400, 40, 30));
+        ID2.setBackground(new java.awt.Color(255, 153, 51));
+        ID2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        ID2.setForeground(new java.awt.Color(255, 255, 255));
+        ID2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ID2.setText("ID:");
+        ID2.setOpaque(true);
+        jPanel1.add(ID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 400, 40, 30));
 
-        IDtextNick.setBackground(new java.awt.Color(0, 0, 153));
-        IDtextNick.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        IDtextNick.setForeground(new java.awt.Color(255, 255, 255));
-        IDtextNick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IDtextNick.setText("ID:");
-        IDtextNick.setOpaque(true);
-        jPanel1.add(IDtextNick, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 40, 30));
+        ID1.setBackground(new java.awt.Color(0, 0, 153));
+        ID1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        ID1.setForeground(new java.awt.Color(255, 255, 255));
+        ID1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ID1.setText("ID:");
+        ID1.setOpaque(true);
+        jPanel1.add(ID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 40, 30));
 
         fighterStrek.setBackground(new java.awt.Color(255, 153, 51));
         fighterStrek.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -449,10 +449,10 @@ public class MainWindow extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ID1;
+    private javax.swing.JLabel ID2;
     private javax.swing.JLabel IDStrekP;
-    private javax.swing.JLabel IDcartoonText;
     private javax.swing.JLabel IDswarsP;
-    private javax.swing.JLabel IDtextNick;
     private javax.swing.JLabel StrekPersonajeCard;
     private javax.swing.JList<String> effortStrek;
     private javax.swing.JList<String> effortSwars;
@@ -492,160 +492,108 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JList<String> tier1Swars;
     private javax.swing.JList<String> tier2Strek;
     private javax.swing.JList<String> tier2Swars;
-    private javax.swing.JList<String> tier3Nick;
     private javax.swing.JList<String> tier3Strek;
+    private javax.swing.JList<String> tier3Swars;
     private javax.swing.JLabel winnersStrek;
     private javax.swing.JLabel winnersSwars;
     // End of variables declaration//GEN-END:variables
 
-    /**
-     * @return the IDcartoon
-     */
    
 
-    /**
-     * @return the StrekPersonajeCard
-     */
+
     public javax.swing.JLabel getStrekPersonajeCard() {
         return StrekPersonajeCard;
     }
 
-    /**
-     * @param StrekPersonajeCard the StrekPersonajeCard to set
-     */
+ 
     public void setStrekPersonajeCard(javax.swing.JLabel StrekPersonajeCard) {
         this.StrekPersonajeCard = StrekPersonajeCard;
     }
 
-    /**
-     * @return the strekCharacterImage
-     */
+ 
     public javax.swing.JLabel getStrekPersonajeImagen() {
         return strekCharacterImage;
     }
 
-    /**
-     * @param cartoonCharacterImage the strekCharacterImage to set
-     */
-    public void setStrekPersonajeImagen(javax.swing.JLabel cartoonCharacterImage) {
-        this.strekCharacterImage = cartoonCharacterImage;
+  
+    public void setStrekPersonajeImagen(javax.swing.JLabel strekCharacterImage) {
+        this.strekCharacterImage = strekCharacterImage;
     }
 
-    /**
-     * @return the effortStrek
-     */
+
     public javax.swing.JList<String> getEffortStrek() {
         return effortStrek;
     }
 
-    /**
-     * @param effortCartoon the effortStrek to set
-     */
-    public void setEffortStrek(javax.swing.JList<String> effortCartoon) {
-        this.effortStrek = effortCartoon;
+
+    public void setEffortStrek(javax.swing.JList<String> effortStrek) {
+        this.effortStrek = effortStrek;
     }
 
-    /**
-     * @return the effortSwars
-     */
+
     public javax.swing.JList<String> getEffortSwars() {
         return effortSwars;
     }
 
-    /**
-     * @param effortNick the effortSwars to set
-     */
-    public void setEffortSwars(javax.swing.JList<String> effortNick) {
-        this.effortSwars = effortNick;
+
+    public void setEffortSwars(javax.swing.JList<String> effortSwars) {
+        this.effortSwars = effortSwars;
     }
 
-    /**
-     * @return the fighterCartoon
-     */
+
     public javax.swing.JLabel getFighterStrek() {
         return fighterStrek;
     }
 
-    /**
-     * @param fighterStrek the fighterStrek to set
-     */
     public void setFighterStrek(javax.swing.JLabel fighterStrek) {
         this.fighterStrek = fighterStrek;
     }
 
-    /**
-     * @return the fighterNick
-     */
+ 
     public javax.swing.JLabel getFighterSwars() {
         return fighterSwars;
     }
 
-    /**
-     * @param fighterSwars the fighterSwars to set
-     */
     public void setFighterSwars(javax.swing.JLabel fighterSwars) {
         this.fighterSwars = fighterSwars;
     }
 
-    /**
-     * @return the jComboBox1
-     */
     public javax.swing.JComboBox<String> getjComboBox1() {
         return simSpeed;
     }
 
-    /**
-     * @return the swarsTarjeta
-     */
+
     public javax.swing.JLabel getSwarsTarjeta() {
         return swarsTarjeta;
     }
 
-    /**
-     * @param swarsTarjeta the swarsTarjeta to set
-     */
     public void setSwarsTarjeta(javax.swing.JLabel swarsTarjeta) {
         this.swarsTarjeta = swarsTarjeta;
     }
 
-    /**
-     * @return the swarsPersonajeImagen
-     */
     public javax.swing.JLabel getSwarsPersonajeImagen() {
         return swarsPersonajeImagen;
     }
 
-    /**
-     * @param swarsPersonajeImagen the swarsPersonajeImagen to set
-     */
+
     public void setSwarsPersonajeImagen(javax.swing.JLabel swarsPersonajeImagen) {
         this.swarsPersonajeImagen = swarsPersonajeImagen;
     }
 
-    /**
-     * @return the stateAI
-     */
     public javax.swing.JLabel getStateAI() {
         return stateAI;
     }
 
-    /**
-     * @param stateAI the stateAI to set
-     */
     public void setStateAI(javax.swing.JLabel stateAI) {
         this.stateAI = stateAI;
     }
 
-    /**
-     * @return the tier1StarTrek
-     */
+
     public javax.swing.JList<String> getTier1StarTrek() {
         return tier1StarTrek;
     }
 
-    /**
-     * @param tier1StarTrek the tier1StarTrek to set
-     */
+ 
     public void setTier1StarTrek(javax.swing.JList<String> tier1StarTrek) {
         this.tier1StarTrek = tier1StarTrek;
     }
@@ -656,8 +604,8 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
    
-    public void setTier1Swars(javax.swing.JList<String> tier1Nick) {
-        this.tier1Swars = tier1Nick;
+    public void setTier1Swars(javax.swing.JList<String> tier1Swars) {
+        this.tier1Swars = tier1Swars;
     }
 
     
@@ -666,8 +614,8 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     
-    public void setTier2Strek(javax.swing.JList<String> tier2Cartoon) {
-        this.tier2Strek = tier2Cartoon;
+    public void setTier2Strek(javax.swing.JList<String> tier2Strek) {
+        this.tier2Strek = tier2Strek;
     }
 
    
@@ -685,18 +633,18 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     
-    public void setTier3Strek(javax.swing.JList<String> tier3Cartoon) {
-        this.tier3Strek = tier3Cartoon;
+    public void setTier3Strek(javax.swing.JList<String> tier3Strek) {
+        this.tier3Strek = tier3Strek;
     }
 
     
     public javax.swing.JList<String> getTier3Swars() {
-        return tier3Nick;
+        return tier3Swars;
     }
 
     
-    public void setTier3Swars(javax.swing.JList<String> tier3Nick) {
-        this.tier3Nick = tier3Nick;
+    public void setTier3Swars(javax.swing.JList<String> tier3Swars) {
+        this.tier3Swars = tier3Swars;
     }
 
     
@@ -705,34 +653,26 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     
-    public void setWinnersStrek(javax.swing.JLabel winnersCartoon) {
-        this.winnersStrek = winnersCartoon;
+    public void setWinnersStrek(javax.swing.JLabel winnersStrek) {
+        this.winnersStrek = winnersStrek;
     }
 
-    /**
-     * @return the winnersSwars
-     */
+ 
     public javax.swing.JLabel getWinnersSwars() {
         return winnersSwars;
     }
 
-    /**
-     * @param winnersNick the winnersSwars to set
-     */
-    public void setWinnersSwars(javax.swing.JLabel winnersNick) {
-        this.winnersSwars = winnersNick;
+
+    public void setWinnersSwars(javax.swing.JLabel winnersSwars) {
+        this.winnersSwars = winnersSwars;
     }
 
-    /**
-     * @return the IDswarsP
-     */
+
     public javax.swing.JLabel getIDSwarsP() {
         return IDswarsP;
     }
 
-    /**
-     * @return the IDStrekP
-     */
+
     public javax.swing.JLabel getIDStrekP() {
         return IDStrekP;
     }
